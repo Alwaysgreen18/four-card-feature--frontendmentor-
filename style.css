@@ -8,11 +8,12 @@
     }
 
     body {
+        background: url(images/favicon-32x32.png);
         font-family: 'Poppins', sans-serif;
     }
 
     section {
-        background: #e5e4e2;
+        background: #fafafa;
         margin: auto;
         width: 100%;
         height: 100%;
@@ -27,6 +28,7 @@
 
     h1 {
         font-weight: 600;
+        color: #4c4e61;
     }
 
     span {
@@ -97,3 +99,109 @@
         
 }
 
+/* for large screen */
+
+@media (min-width: 376px) {
+    * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    section {
+        background: #fafafa;
+        margin: auto;
+        width: 1000px;
+        height: 100%;
+        
+    }
+
+    .head {
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 45px;
+    }
+
+    h1 {
+        margin: auto;
+        width: 300px;
+        color: #4c4e61;
+    }
+
+    span {
+        font-weight: 200;
+        color: #a3a5ae;
+    }
+
+    .head-text {
+        margin: auto;
+        width: 500px;
+        padding-top: 20px;
+        font-weight: 400;
+        color: #a3a5ae;
+    }
+
+    .boxes {
+        display: grid;
+        height: 100%;
+        grid-gap: 10px;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas:
+        ". . . . t t t t . . . ."
+        "s s s s . . . . c c c c"
+        ". . . . k k k k . . . .";
+
+    }
+
+    .box {
+        margin: auto;
+        padding: 10px;
+        background: #fff;
+        width: 300px;
+        border-radius: 5px;
+        box-shadow: 5px 5px 10px#a3a5ae;        
+    }
+
+    .up {
+        margin-top: 20px;
+        border-top: 2px solid red;
+        grid-area: t;
+    }
+
+    .right {
+        margin-right: 20px;
+        border-top: 2px solid #549ef2;
+        grid-area: c;
+    }
+
+    .down {
+        margin-bottom: 20px;
+        padding: 10px;
+        border-top: 2px solid #fcaf4a;
+        grid-area: k;
+    }
+
+    .left {
+        margin-left: 20px;
+        padding: 10px;
+        border-top: 2px solid #45d3d3;
+        grid-area: s;
+    }
+
+    img {
+        float: right;
+        padding: 15px;
+    }
+
+    h2 {
+        margin-bottom: 15px;
+    }
+}
